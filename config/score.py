@@ -7,7 +7,7 @@ from azureml.core.model import Model
 def init():
     global model
     # Get the path to the deployed model file and load it
-    model_path = Model.get_model_path('fraud_model')
+    model_path = Model.get_model_path(model_name = 'fraud_model')
     model = joblib.load(model_path)
 
 # Called when a request is received
