@@ -1,0 +1,36 @@
+trigger:
+- 'master'
+
+variables:
+- group: trainmodel
+
+pool:
+  name: Azure Pipelines
+  vmImage: 'ubuntu-18.04'
+
+resources:
+  containers:
+  - container: mlops
+    image: mcr.microsoft.com/mlops/python:latest
+
+stages:
+- stage: 'Build'
+  displayName: 'Build'
+  jobs: 
+  - job: TrainAndRegisterModel
+    displayName: 'Train and Register Model'
+    container: mlops
+    steps:
+    - publish: '$(Build.SourcesDirectory)/config'
+      artifact: config
+    - task: AzureCLI@2
+      displayName: 'Setup'
+      inputs:
+        azureSubscription: 'MLOpsPython - Connection'
+        scriptType: bash
+        scriptLocation: inlineScript
+        inlineScript: |
+          set -e # fail on error
+          export SUBSCRIPTION_ID=$(az account show --query id -o tsv)  
+          python ./model/scripts/setup.py
+        workingDirectory: ./
