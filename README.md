@@ -1,6 +1,6 @@
 # MLOPS 
 
-### Clone Repository
+### Clone Repository & Create Environment Library  
 Start cloning this repo in the Azure DevOps Repo blade. 
 
 Create a variables library called "trainmodel" in the Pipelines label with the following:
