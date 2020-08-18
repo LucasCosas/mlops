@@ -1,5 +1,0 @@
-{
-    "entryScript": "./config/score.py",
-    "runtime": "python",
-    "condaFile": "./config/myenv.yml"
- }
