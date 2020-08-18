@@ -8,12 +8,25 @@ Create a variables library called "trainmodel" in the Pipelines label with the f
 - RESOURCE_GROUP : "resource group name"
 - WORKSPACE_NAME : "AML workspace name"
 
+### Create Connected Service
+
+Go to project settings on the left corner and look for Service Connections
+
+Create a new one for Azure Resource Manager specifing a manual Service Principal if you already have one or an autommatic one.
+
+Name it "MLOpsServiceConnection"
+
 ### Create first Pipeline
 
 Head to pipelines blade and create your first build/training pipeline:
 Click new pipeline and choose Azure Repos Git and Existing Azure Pipelines YAML File
 /pipeline/azure-pipelines.yml
 Run the pipeline
+
+### Training and Registering pipeline
+
+The pipeline above did a few things:
+Registered a datastore pointing to a BLOB
 
 ### CD Pipeline
 

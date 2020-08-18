@@ -29,9 +29,9 @@ if 'creditcard' not in ws.datasets:
     
     #Set blobdatastore
     blob_datastore_name='MyBlobDatastore'
-    account_name=os.getenv("BLOB_ACCOUNTNAME_62", "storagemlops") # Storage account name
-    container_name=os.getenv("BLOB_CONTAINER_62", "fraud") # Name of Azure blob container
-    account_key=os.getenv("BLOB_ACCOUNT_KEY_62", "eLTeG4KN9Zji/MlyD+nAmfNd2QKQ0X1y4iQ/EJa5f8lvgCeliNQnkeYkm9cXVuexKjP7GLSZWmBIs5lnOBmzcQ==") # Storage account 
+    account_name=os.getenv("BLOB_ACCOUNTNAME_62", "") # Storage account name
+    container_name=os.getenv("BLOB_CONTAINER_62", "") # Name of Azure blob container
+    account_key=os.getenv("BLOB_ACCOUNT_KEY_62", "") # Storage account 
     
 
     try:
