@@ -46,6 +46,8 @@ Install the following extension to your organization:
 
 ### First CD
 
+Change Agent pool to ubuntu
+
 Open the Releases in the Pipelines blade and click create release, chose empty job.
 
 Create an Artifact from AzureML Model Artifact type, chosing the Service Endpoint AzureMLServiceConnection and Model name fraud_model. Click on the lightning icon on top of the artifact and enable CD trigger
