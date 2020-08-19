@@ -10,7 +10,9 @@ Create a variables library called "trainmodel" in the Pipelines label with the f
 - SUBSCRIPTION_ID : "Azure subscription ID"
 ### Data and Storage Account
 
-Create a storage account, take the csv in the ./data/creditcard.csv and upload into a new container
+Create a storage account, take the csv in the link below and upload into a new container
+
+https://storagemlops.blob.core.windows.net/fraud/creditcard.csv?sp=r&st=2020-08-19T12:03:02Z&se=2020-08-26T20:03:02Z&spr=https&sv=2019-12-12&sr=b&sig=i7jHw5ZgYEJVJXxgcVX4dU4iGZFu3732Z%2BsuWW5SvCM%3D
 
 Take note of the Storage Account name, container name and key
 
