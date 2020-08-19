@@ -71,7 +71,7 @@ df = creditds.to_pandas_dataframe()
 
 default_ds = ws.get_default_datastore()
 
-default_ds.upload_files(files=['./config/deploymentconfig.json', './config/inferenceconfig.json', './config/myenv.yml'], # Upload the configs
+default_ds.upload_files(files=['./config/deploymentconfigaci.json', './config/inferenceconfig.json', './config/myenv.yml'], # Upload the configs
                         target_path='config/', # Put it in a folder path in the datastore
                         overwrite=True, # Replace existing files of the same name
                         show_progress=True)
