@@ -1,14 +1,20 @@
-import json
-import joblib
-import numpy as np
 from azureml.core.model import Model
+import json
+import pickle
+import numpy as np
+import pandas as pd
+
+
+
 
 # Called when the service is loaded
 def init():
     global model
     # Get the path to the deployed model file and load it
     model_path = Model.get_model_path(model_name = 'fraud_model')
+    model_path = model_path + "/fraud_model.pkl"
     model = joblib.load(model_path)
+    
 
 # Called when a request is received
 def run(raw_data):
@@ -23,3 +29,5 @@ def run(raw_data):
         predicted_classes.append(classnames[prediction])
     # Return the predictions as JSON
     return json.dumps(predicted_classes)
+
+
