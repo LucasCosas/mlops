@@ -1,5 +1,5 @@
 {
-    "entryScript": "score-prod.py",
+    "entryScript": "scoreprod.py",
     "runtime": "python",
     "condaFile": "myenv.yml"
  }
