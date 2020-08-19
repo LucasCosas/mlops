@@ -73,7 +73,7 @@ output_path = output_folder + "/model.pkl"
 joblib.dump(value=model, filename=output_path)
 
 
-files = ['deploymentconfig.json', 'inferenceconfig.json', 'myenv.yml']
+files = ['deploymentconfigaci.json', 'inferenceconfig.json', 'myenv.yml']
 
 
 
