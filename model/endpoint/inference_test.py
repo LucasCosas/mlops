@@ -1,7 +1,7 @@
 import numpy as np
 
-endpoint = 'http://adc63cf6-969c-4faf-9edd-ab5e6a259e1d.eastus.azurecontainer.io/score' #Replace with your endpoint
-key = '3uFcmdx4t1BM3AET7SA209kv6xUrlwnj' #Replace with your key
+endpoint = 'http://52.177.235.191:80/api/v1/service/myservice2/score' #Replace with your endpoint
+key = 'vU2NEhi57JOwSTlYpGtT0co0oBCLUwik' #Replace with your key
 
 import urllib.request
 import json
