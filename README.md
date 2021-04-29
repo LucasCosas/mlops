@@ -22,7 +22,9 @@ https://storagemlops.blob.core.windows.net/fraud/creditcard.csv?sp=r&st=2020-09-
 
 Take note of the Storage Account name, container name and key
 
-In the file setup.py make sure to use the Storage Account name, container and key in lines 32-34
+In the file setup.py make sure to use the Storage Account name, container and key in lines 35-37
+
+If you already created a datastore (azure ml datastore pointing to a Storage Account or datalake) change line 27
 
 ### Create Connected Services
 
@@ -40,6 +42,7 @@ Head to the pipelines blade and create your first build/training pipeline:
 Click new pipeline and chose Azure Repos Git and Existing Azure Pipelines YAML File
 /pipeline/azure-pipelines.yml
 Run the pipeline
+
 
 ### Training and Registering pipeline
 

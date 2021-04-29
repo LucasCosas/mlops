@@ -17,17 +17,8 @@ model_file = model_folder + "/model.pkl"
 #model = joblib.load(model_file)
 
 #load de config files
-"""
-files = ['deploymentconfig.json', 'inferenceconfig.json', 'myenv.yml']
 
-for f in files:
-    Model.register(workspace=run.experiment.workspace,
-            model_path = model_folder + "/" +f,
-            model_name = f,
-            tags={'Training context':'Pipeline'})
 
-#register model and config files
-"""
 Model.register(workspace=run.experiment.workspace,
                model_path = model_folder,
                model_name = 'fraud_model',

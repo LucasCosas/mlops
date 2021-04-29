@@ -21,7 +21,10 @@ ws = Workspace.get(
 )
 
 # Set default Datastore
-ws.set_default_datastore('workspaceblobstore')
+
+# ----> Uncomment the following line if there already is a datastore and name it correctly
+
+# ws.set_default_datastore('workspaceblobstore')
 
 # if creditcard is not registered
 
